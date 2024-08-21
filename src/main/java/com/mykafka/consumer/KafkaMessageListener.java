@@ -32,7 +32,7 @@ public class KafkaMessageListener {
 //        log.info("consumer4 consume the message {} ", message);
 //    }
 
-    @KafkaListener(topics = "${topic.name}",groupId = "${spring.kafka.consumer.group-id}")
+    @KafkaListener(topics = "${myconsumer.topic-name}", groupId = "${myconsumer.group-id}")
     public void consumeObject(Customer customer) {
         log.info("consumer consume the Customer Object {} ", customer.toString());
     }
